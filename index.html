@@ -4,161 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esmaeel Aslami - Bio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        /* Background Image with Parallax Effect */
-        .parallax {
-            background: url('https://images.unsplash.com/photo-1592773416059-65c7b9e5d4a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .parallax::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        .container {
-            max-width: 800px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             text-align: center;
-            position: relative;
-            z-index: 1;
+            padding: 50px;
+            background: linear-gradient(135deg, #f4f4f4, #e6f2ff);
+            color: #333;
         }
-        h1 {
-            font-size: 40px;
-            color: #003300;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        p {
-            font-size: 22px;
-            color: #555;
+
+        /* Logo Section */
+        .logo-section {
             margin-bottom: 30px;
-            line-height: 1.6;
+            position: relative;
         }
         .university-logo {
-            max-width: 120px;
-            margin: 20px auto;
-            display: block;
+            max-width: 150px;
+            height: auto;
+            animation: fadeIn 2s ease-in-out;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1), 0px -4px 10px rgba(255, 255, 255, 0.8) inset;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Title Styling */
+        h1 {
+            color: #004d99;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        /* Links Styling */
         .links {
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         a {
             text-decoration: none;
-            color: #fff;
-            background: #006400;
-            padding: 15px 25px;
-            border-radius: 8px;
-            margin: 10px;
-            font-size: 18px;
-            transition: transform 0.3s ease, background 0.3s ease;
+            color: white;
+            background: #007bff;
+            padding: 12px 20px;
+            border-radius: 25px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         a:hover {
-            background: #004d00;
-            transform: translateY(-5px);
+            background: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
         }
+
+        /* Hover Effects for Icons */
         a i {
             margin-right: 8px;
-            font-size: 22px;
+            font-size: 18px;
+            transition: transform 0.3s ease;
         }
+        a:hover i {
+            transform: rotate(10deg);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .parallax {
-                height: auto;
-                min-height: 100vh;
+            body {
+                padding: 20px;
             }
             .container {
                 padding: 20px;
             }
             h1 {
-                font-size: 32px;
+                font-size: 24px;
             }
             p {
-                font-size: 18px;
+                font-size: 16px;
             }
             a {
-                font-size: 16px;
                 padding: 10px 15px;
+                font-size: 14px;
             }
-        }
-        /* Geometric Shapes for Visual Appeal */
-        .shape-1 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: float 5s infinite ease-in-out;
-        }
-        .shape-2 {
-            position: absolute;
-            bottom: 10%;
-            right: 10%;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.2);
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            animation: rotate 10s infinite linear;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <div class="parallax">
-        <div class="container">
-            <h1>About Me</h1>
-            <p>Esmaeel Aslami is a passionate Biomedical Engineering student with a keen interest in data science and machine learning.</p>
-            <!-- University Logo -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Iauq_logo.jpg" alt="University of Qazvin Azad Logo" class="university-logo">
-            <div class="links">
-                <a href="https://linkedin.com/in/esmaeel-aslami" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/esmaeel-aslami" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://twitter.com/esmaeel_aslami" target="_blank">
-                    <i class="fab fa-twitter"></i> Twitter
-                </a>
-                <a href="https://instagram.com/esmaylaslmi" target="_blank">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-            </div>
+    <!-- University Logo -->
+    <div class="logo-section">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Iauq_logo.jpg" alt="University of Qazvin Azad Logo" class="university-logo">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Esmaeel Aslami is a passionate Biomedical Engineering student with a keen interest in data science and machine learning.</p>
+        <div class="links">
+            <a href="https://linkedin.com/in/esmaeel-aslami" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/esmaeel-aslami" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://twitter.com/esmaeel_aslami" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://instagram.com/esmaylaslmi" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
         </div>
-        <!-- Geometric Shapes -->
-        <div class="shape-1"></div>
-        <div class="shape-2"></div>
     </div>
 </body>
 </html>
