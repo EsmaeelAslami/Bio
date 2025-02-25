@@ -11,22 +11,21 @@
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
             padding: 50px;
-            background: linear-gradient(135deg, #2c3e50, #1abc9c); /* Dark green and black gradient */
+            background: linear-gradient(135deg, #2c3e50, #16a085); /* Dark blue to green gradient */
             color: white;
         }
 
-        /* Logo Section */
-        .logo-section {
-            margin-bottom: 30px;
-            position: relative;
-        }
-        .university-logo {
-            max-width: 150px;
+        /* Header Image */
+        .header-image {
+            max-width: 100%;
             height: auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
             animation: fadeIn 2s ease-in-out;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
+            from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
 
@@ -35,14 +34,14 @@
             max-width: 600px;
             margin: auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for contrast */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
             border-radius: 15px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), 0px -4px 10px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-10px);
+            box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         /* Title Styling */
@@ -50,18 +49,17 @@
             color: #ecf0f1;
             font-size: 32px;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 15px;
-            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         /* Paragraph Styling */
         p {
-            color: #ecf0f1;
+            color: #bdc3c7;
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
-            font-weight: normal;
         }
 
         /* Links Styling */
@@ -74,9 +72,9 @@
         a {
             text-decoration: none;
             color: white;
-            background: #27ae60; /* Bright green */
+            background: #27ae60; /* Green button */
             padding: 12px 20px;
-            border-radius: 5px;
+            border-radius: 25px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -86,7 +84,7 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         a:hover {
-            background: #16a085; /* Darker green on hover */
+            background: #2ecc71; /* Lighter green on hover */
             transform: scale(1.05);
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
@@ -95,11 +93,10 @@
         a i {
             margin-right: 8px;
             font-size: 18px;
-            transition: transform 0.3s ease, color 0.3s ease;
+            transition: transform 0.3s ease;
         }
         a:hover i {
             transform: rotate(10deg);
-            color: #ecf0f1; /* Bright white on hover */
         }
 
         /* Responsive Design */
@@ -124,10 +121,8 @@
     </style>
 </head>
 <body>
-    <!-- University Logo -->
-    <div class="logo-section">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Iauq_logo.jpg" alt="University of Qazvin Azad Logo" class="university-logo">
-    </div>
+    <!-- Header Image -->
+    <img src="https://images.unsplash.com/photo-1558981502-2088c5201b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="Biomedical Engineering" class="header-image">
 
     <!-- Main Content -->
     <div class="container">
