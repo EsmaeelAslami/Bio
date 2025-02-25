@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esmaeel Aslami - Bio</title>
+    <title>Esmaeel Aslami - Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* General Styles */
@@ -54,12 +54,41 @@
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
+        /* Subtitle Styling */
+        h2 {
+            color: #bdc3c7;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
         /* Paragraph Styling */
         p {
             color: #bdc3c7;
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .skill {
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* Links Styling */
@@ -72,7 +101,7 @@
         a {
             text-decoration: none;
             color: white;
-            background: #27ae60; /* Green button */
+            background: #27ae60;
             padding: 12px 20px;
             border-radius: 25px;
             display: inline-flex;
@@ -84,19 +113,9 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         a:hover {
-            background: #2ecc71; /* Lighter green on hover */
+            background: #2ecc71;
             transform: scale(1.05);
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Hover Effects for Icons */
-        a i {
-            margin-right: 8px;
-            font-size: 18px;
-            transition: transform 0.3s ease;
-        }
-        a:hover i {
-            transform: rotate(10deg);
         }
 
         /* Responsive Design */
@@ -126,8 +145,23 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h1>About Me</h1>
-        <p>Esmaeel Aslami is a passionate Biomedical Engineering student with a keen interest in data science and machine learning.</p>
+        <h1>Esmaeel Aslami</h1>
+        <h2>Biomedical Engineering Student</h2>
+        <p>
+            I am Esmaeel Aslami, a student of Biomedical Engineering with a passion for data science, machine learning, and artificial intelligence in medical fields. I am looking for opportunities to enhance my skills in these areas.
+        </p>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <div class="skill">Data Science</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Artificial Intelligence</div>
+            <div class="skill">Medical Image Processing</div>
+            <div class="skill">Python</div>
+            <div class="skill">R</div>
+        </div>
+
+        <!-- Social Links -->
         <div class="links">
             <a href="https://linkedin.com/in/esmaeel-aslami" target="_blank">
                 <i class="fab fa-linkedin"></i> LinkedIn
