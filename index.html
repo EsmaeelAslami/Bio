@@ -6,36 +6,19 @@
     <title>Esmaeel Aslami - Biomedical Engineer</title>
     <style>
         body {
-            font-family: "Arial", sans-serif;
+            font-family: "Times New Roman", serif;
             line-height: 1.8;
             margin: 0;
             padding: 0;
             background-color: #eef4ff;
             color: #333;
+            text-align: center;
         }
         header {
             background: #003366;
             color: white;
             padding: 30px;
-            text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            display: flex;
-            gap: 20px;
-        }
-        .sidebar {
-            flex: 1;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .content {
-            flex: 2;
         }
         .profile img {
             width: 160px;
@@ -43,7 +26,13 @@
             border-radius: 50%;
             object-fit: cover;
             display: block;
+            margin: 20px auto;
+        }
+        .container {
+            max-width: 900px;
             margin: auto;
+            padding: 20px;
+            text-align: left;
         }
         .section {
             margin-bottom: 30px;
@@ -62,16 +51,15 @@
             margin-right: 5px;
             display: inline-block;
         }
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            margin: 5px;
-        }
         footer {
             text-align: center;
             padding: 15px;
             background: #003366;
             color: white;
+            margin-top: 20px;
+        }
+        .contact-info {
+            text-align: center;
             margin-top: 20px;
         }
     </style>
@@ -81,81 +69,63 @@
         <h1>Esmaeel Aslami</h1>
         <p>Biomedical Engineering Student | Researcher in Machine Learning & Medical Imaging</p>
     </header>
+    <div class="profile">
+        <img src="https://avatars.githubusercontent.com/u/198054867?v=4" alt="Profile Picture">
+    </div>
     <div class="container">
-        <div class="sidebar">
-            <div class="profile">
-                <img src="https://avatars.githubusercontent.com/u/198054867?v=4" alt="Profile Picture">
-            </div>
-            <h2>Contact Info</h2>
-            <p><strong>Email:</strong> esmaeel.aslami@iau.ir</p>
-            <p><strong>Phone:</strong> +98 (937) 2098190</p>
-            <p><strong>Location:</strong> Tehran, Iran</p>
-            <div class="social-icons">
-                <a href="https://github.com/yourusername" target="_blank">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-                </a>
-            </div>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>A highly motivated biomedical engineering researcher with strong scientific and lab experience. Published in top-tier journals and collaborated with international research teams.</p>
         </div>
-        <div class="content">
-            <div class="section">
-                <h2>Summary</h2>
-                <p>A highly motivated biomedical engineering researcher with strong scientific and lab experience. Published in top-tier journals and collaborated with international research teams.</p>
-            </div>
-            <div class="section">
-                <h2>Education</h2>
-                <p><strong>B.Sc. in Biomedical Engineering, Islamic Azad University</strong> (2023 – 2028)</p>
-                <p><strong>GPA:</strong> 3.47/4</p>
-            </div>
-            <div class="section">
-                <h2>Research Interests</h2>
-                <ul>
-                    <li>Medical Image Processing</li>
-                    <li>Bioinstrumentation</li>
-                    <li>Brain-Computer Interfaces (BCI)</li>
-                    <li>Medical Robotics</li>
-                    <li>Telemedicine & e-Health</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>Work Experience</h2>
-                <p><strong>Research Assistant - Mechatronics Research Laboratory (MRL)</strong> (2025 - Present)</p>
-                <ul>
-                    <li>Analyzing medical images using MATLAB & Python</li>
-                    <li>Developing control strategies for biomedical systems</li>
-                    <li>Collaborating with multidisciplinary research teams</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>Publications</h2>
-                <ul>
-                    <li>H. Ghadiri, GA Hazareh, and E. Aslami. "Finite-time integral fast terminal sliding mode control for uncertain quadrotor UAV based on state-dependent Riccati equation observer subjected to disturbances." Journal of Vibration and Control 30.11-12 (2024): 2528-2548.</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>Skills</h2>
-                <div class="skills">
-                    <span>MATLAB</span>
-                    <span>Python</span>
-                    <span>Machine Learning</span>
-                    <span>Medical Imaging</span>
-                    <span>LaTeX</span>
-                    <span>Microsoft Office</span>
-                </div>
-            </div>
-            <div class="section">
-                <h2>Hobbies</h2>
-                <ul>
-                    <li>Futsal, Swimming, Ping Pong</li>
-                    <li>Podcast Listening</li>
-                    <li>Photography</li>
-                </ul>
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>B.Sc. in Biomedical Engineering, Islamic Azad University</strong> (2023 – 2028)</p>
+            <p><strong>GPA:</strong> 3.47/4</p>
+        </div>
+        <div class="section">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Medical Image Processing</li>
+                <li>Bioinstrumentation</li>
+                <li>Brain-Computer Interfaces (BCI)</li>
+                <li>Medical Robotics</li>
+                <li>Telemedicine & e-Health</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Work Experience</h2>
+            <p><strong>Research Assistant - Mechatronics Research Laboratory (MRL)</strong> (2025 - Present)</p>
+            <ul>
+                <li>Analyzing medical images using MATLAB & Python</li>
+                <li>Developing control strategies for biomedical systems</li>
+                <li>Collaborating with multidisciplinary research teams</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Publications</h2>
+            <ul>
+                <li>H. Ghadiri, GA Hazareh, and E. Aslami. "Finite-time integral fast terminal sliding mode control for uncertain quadrotor UAV based on state-dependent Riccati equation observer subjected to disturbances." Journal of Vibration and Control 30.11-12 (2024): 2528-2548.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span>MATLAB</span>
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Medical Imaging</span>
+                <span>LaTeX</span>
+                <span>Microsoft Office</span>
             </div>
         </div>
     </div>
     <footer>
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p><strong>Email:</strong> esmaeel.aslami@iau.ir</p>
+            <p><strong>Phone:</strong> +98 (937) 2098190</p>
+            <p><strong>Location:</strong> Tehran, Iran</p>
+        </div>
         <p>&copy; 2025 Esmaeel Aslami. All rights reserved.</p>
     </footer>
 </body>
