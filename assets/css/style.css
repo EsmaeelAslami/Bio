@@ -1,188 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esmaeel Aslami - Biomedical Engineer</title>
-    <style>
-        body {
-    font-family: "Times New Roman", serif;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #f0f4f8, #c8d8e4);
-    color: #2c3e50;
-    background-size: cover;
-    background-attachment: fixed;
+/* assets/css/style.css */
+* { box-sizing: border-box; }
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  line-height: 1.8;
+  color: #2c3e50;
+  background: linear-gradient(135deg,#f0f4f8,#c8d8e4);
+  -webkit-font-smoothing:antialiased;
 }
-        header {
-            background: #00264d;
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .header-profile img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-left: 20px;
-            border: 4px solid #004080;
-        }
-        .header-info {
-            text-align: left;
-            flex-grow: 1;
-        }
-        .header-info h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #e6f2ff;
-        }
-        .header-info p {
-            margin: 5px 0 0 0;
-            font-size: 1.1em;
-            color: #cce0ff;
-        }
-        .container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 30px 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    text-align: left;
+nav {
+  background:#003366;
+  padding:12px 20px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
-        .section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #eaf2f8;
-    border-left: 8px solid #003366;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:6px;
 }
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+nav a:hover, nav a.active { background:#ffd700; color:#003366; }
+
+header{
+  background:#00264d;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 20px;
+  gap:16px;
 }
-        .section h2 {
-            color: #1c4966;
-            border-bottom: 2px solid #003366;
-            padding-bottom: 5px;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-        .skills span {
-            background: #003366;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin-right: 8px;
-            margin-bottom: 5px;
-            display: inline-block;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #00264d;
-            color: white;
-            margin-top: 20px;
-            font-size: 0.9em;
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-            transition: transform 0.2s ease;
-        }
-        .social-icons img:hover {
-            transform: scale(1.1);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-info">
-            <h1>Esmaeel Aslami</h1>
-            <p>Biomedical Engineering Student | Researcher in Machine Learning & Medical Imaging</p>
-        </div>
-        <div class="header-profile">
-            <img src="https://avatars.githubusercontent.com/u/198054867?v=4" alt="Profile Picture">
-        </div>
-    </header>
-    <div class="container">
-        <div class="section">
-            <h2>Summary</h2>
-            <p>A highly motivated biomedical engineering researcher with strong scientific and lab experience. Published in top-tier journals and collaborated with international research teams.</p>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>B.Sc. in Biomedical Engineering, Islamic Azad University</strong> (2023 – 2028)</p>
-            <p><strong>GPA:</strong> A</p>
-        </div>
-        <div class="section">
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Medical Image Processing</li>
-                <li>Bioinstrumentation</li>
-                <li>Brain-Computer Interfaces (BCI)</li>
-                <li>Medical Robotics</li>
-                <li>Telemedicine & e-Health</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Work Experience</h2>
-            <p><strong>Research Assistant - Mechatronics Research Laboratory (MRL)</strong> (2025 - Present)</p>
-            <ul>
-                <li>Analyzing medical images using MATLAB & Python</li>
-                <li>Developing control strategies for biomedical systems</li>
-                <li>Collaborating with multidisciplinary research teams</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Publications</h2>
-            <ul>
-                <li>H. Ghadiri, GA Hazareh, and E. Aslami. "Finite-time integral fast terminal sliding mode control for uncertain quadrotor UAV based on state-dependent Riccati equation observer subjected to disturbances." Journal of Vibration and Control 30.11-12 (2024): 2528-2548.</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span>MATLAB</span>
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Medical Imaging</span>
-                <span>LaTeX</span>
-                <span>Microsoft Office</span>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="contact-info">
-            <h2>Contact Info</h2>
-            <p><strong>Email:</strong> esmaeel.aslami@iau.ir</p>
-            <p><strong>Phone:</strong> +98 (937) 2098190</p>
-            <p><strong>Location:</strong> Tehran, Iran</p>
-            <div class="social-icons">
-                <a href="https://github.com/yourusername" target="_blank">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
-                </a>
-                <a href="https://linkedin.com/in/Ishmal Aslami" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-                </a>
-                <a href="https://instagram.com/esmaylaslmi" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-                </a>
-            </div>
-        </div>
-        <p>&copy; 2025 Esmaeel Aslami. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+.header-info h1{ margin:0; font-size:2rem; color:#e6f2ff;}
+.header-info p{ margin:6px 0 0; color:#cce0ff; }
+
+.header-profile img{
+  width:110px; height:110px; object-fit:cover;
+  border-radius:50%; border:4px solid #004080;
+}
+
+/* container */
+.container{
+  max-width:980px; margin:24px auto; padding:28px;
+  background:rgba(255,255,255,0.95); border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* sections */
+.section{
+  background:#eaf2f8; padding:18px; margin-bottom:20px;
+  border-left:8px solid #003366; border-radius:10px;
+  transition:transform .15s, box-shadow .15s;
+}
+.section:hover{ transform:translateY(-6px); box-shadow:0 14px 28px rgba(0,0,0,.12); }
+.section h2{ color:#1c4966; margin-top:0; }
+
+/* skills */
+.skills span{
+  display:inline-block; background:#003366; color:#fff;
+  padding:7px 12px; border-radius:18px; margin:6px 8px 0 0;
+}
+
+/* projects grid */
+.gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+.card{ background:#fff; border-radius:8px; padding:10px; box-shadow:0 6px 12px rgba(0,0,0,0.06); text-align:center;}
+.card img{ width:100%; height:160px; object-fit:cover; border-radius:6px; cursor:pointer; }
+
+/* footer */
+footer{ background:#00264d; color:#fff; padding:18px; text-align:center; margin-top:18px; border-top-left-radius:6px; border-top-right-radius:6px;}
+
+/* lightbox overlay */
+#lightboxOverlay{
+  position:fixed; top:0; left:0; right:0; bottom:0; display:none;
+  align-items:center; justify-content:center; background:rgba(0,0,0,0.8); z-index:9999;
+}
+#lightboxOverlay img{ max-width:90%; max-height:85%; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.6); }
+
+/* responsive tweaks */
+@media (max-width:640px){
+  .header-info h1{ font-size:1.4rem; }
+  .header-profile img{ width:86px; height:86px; }
+  nav{ padding:10px; gap:8px;}
+}
