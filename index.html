@@ -13,14 +13,20 @@
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
             --secondary: #7c3aed;
             --dark: #1e293b;
+            --dark-gray: #334155;
+            --medium-gray: #64748b;
+            --light-gray: #94a3b8;
+            --lighter-gray: #e2e8f0;
             --light: #f8fafc;
-            --gray: #64748b;
-            --gray-light: #e2e8f0;
+            --white: #ffffff;
             --success: #10b981;
+            --warning: #f59e0b;
             --border-radius: 12px;
             --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
             --transition: all 0.3s ease;
         }
 
@@ -50,7 +56,7 @@
             position: relative;
             padding: 40px 0 80px;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            color: var(--white);
             overflow: hidden;
         }
 
@@ -148,8 +154,9 @@
             padding: 10px 20px;
             border-radius: 50px;
             font-size: 0.95rem;
+            color: var(--white);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: var(--transition);
         }
 
@@ -160,7 +167,7 @@
 
         .specialty i {
             margin-right: 8px;
-            color: #60a5fa;
+            color: var(--primary-light);
         }
 
         /* Navigation */
@@ -175,14 +182,14 @@
             list-style: none;
             flex-wrap: wrap;
             gap: 5px;
-            background: rgba(15, 23, 42, 0.7);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(15px);
             border-radius: 50px;
             padding: 10px;
             max-width: 800px;
             margin: 0 auto;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .main-nav a {
@@ -198,13 +205,13 @@
         }
 
         .main-nav a:hover {
-            background: rgba(37, 99, 235, 0.2);
-            color: #ffffff;
+            background: rgba(37, 99, 235, 0.3);
+            color: var(--white);
         }
 
         .main-nav a.active {
             background: var(--primary);
-            color: white;
+            color: var(--white);
         }
 
         .main-nav a i {
@@ -214,7 +221,7 @@
         /* Intro Section */
         .intro {
             padding: 100px 0;
-            background-color: white;
+            background-color: var(--white);
         }
 
         .intro-content {
@@ -246,19 +253,19 @@
 
         .intro-text {
             font-size: 1.2rem;
-            color: var(--gray);
+            color: var(--medium-gray);
             margin-bottom: 40px;
             line-height: 1.8;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ff 100%);
+            background: linear-gradient(135deg, #f0f9ff 0%, #f5f3ff 100%);
             border-left: 4px solid var(--primary);
             padding: 25px;
             border-radius: var(--border-radius);
             margin-top: 40px;
             text-align: left;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-light);
         }
 
         .highlight-box h3 {
@@ -275,8 +282,9 @@
         }
 
         .highlight-box p {
-            color: var(--gray);
+            color: var(--medium-gray);
             font-size: 1.05rem;
+            line-height: 1.7;
         }
 
         /* Quick Links */
@@ -293,20 +301,21 @@
             align-items: center;
             gap: 12px;
             padding: 15px 25px;
-            background: white;
+            background: var(--white);
             border-radius: var(--border-radius);
             text-decoration: none;
             color: var(--dark);
-            font-weight: 500;
-            box-shadow: var(--shadow);
+            font-weight: 600;
+            box-shadow: var(--shadow-light);
             transition: var(--transition);
-            border: 1px solid var(--gray-light);
+            border: 1px solid var(--lighter-gray);
         }
 
         .quick-link:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             color: var(--primary);
+            border-color: var(--primary-light);
         }
 
         .quick-link i {
@@ -317,7 +326,7 @@
         /* Footer */
         footer {
             background: var(--dark);
-            color: white;
+            color: var(--white);
             padding: 40px 0;
             text-align: center;
         }
@@ -337,7 +346,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             font-size: 1.2rem;
             transition: var(--transition);
             text-decoration: none;
@@ -349,9 +358,83 @@
         }
 
         .copyright {
-            color: #94a3b8;
+            color: var(--light-gray);
             font-size: 0.9rem;
             margin-top: 20px;
+        }
+
+        /* Additional Sections */
+        .featured-projects {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .project-content p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .project-tag {
+            background: var(--lighter-gray);
+            color: var(--medium-gray);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
         }
 
         /* Responsive Design */
@@ -398,6 +481,14 @@
                 width: 100%;
                 max-width: 300px;
             }
+            
+            .featured-projects {
+                padding: 60px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -416,6 +507,10 @@
             
             .section-title {
                 font-size: 1.8rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -504,6 +599,54 @@
         </div>
     </section>
     
+    <!-- New Featured Projects Section -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A selection of my recent work in biomedical engineering and AI research</p>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>EEG-Based BCI System</h3>
+                        <p>Developed a brain-computer interface system using EEG signals for assistive technology applications, implementing real-time signal processing and machine learning classification.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Signal Processing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Medical Image Analysis Tool</h3>
+                        <p>Created a deep learning pipeline for automatic segmentation and analysis of musculoskeletal tissues from CT scans, improving diagnostic accuracy for osteosarcopenia.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">PyTorch</span>
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Robotic Platform Development</h3>
+                        <p>Contributed to the design and implementation of aerial and mobile robotic platforms at Mechatronics Research Laboratory, focusing on biomedical applications.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">ROS</span>
+                            <span class="project-tag">MATLAB</span>
+                            <span class="project-tag">Robotics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="container">
             <div class="social-links">
@@ -541,6 +684,9 @@
                     link.classList.remove('active');
                 }
             });
+            
+            // Update copyright year
+            document.querySelector('.copyright').innerHTML = `&copy; ${new Date().getFullYear()} Ishmael Aslami. All rights reserved. | Designed with focus on clarity and purpose`;
             
             // Add smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
