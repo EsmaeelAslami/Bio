@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -19,9 +19,11 @@
             --dark-gray: #334155;
             --medium-gray: #64748b;
             --light-gray: #94a3b8;
-            --lighter-gray: #e2e8f0;
+            --lighter-gray: #f1f5f9;
             --light: #f8fafc;
             --white: #ffffff;
+            --off-white: #fafafa;
+            --card-bg: #ffffff;
             --success: #10b981;
             --warning: #f59e0b;
             --border-radius: 12px;
@@ -40,7 +42,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            background-color: var(--light);
+            background-color: var(--off-white);
             overflow-x: hidden;
         }
 
@@ -129,6 +131,7 @@
             background-clip: text;
             color: transparent;
             line-height: 1.2;
+            font-family: 'Playfair Display', serif;
         }
 
         .tagline {
@@ -139,6 +142,7 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            letter-spacing: 0.3px;
         }
 
         .specialization {
@@ -158,11 +162,13 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: var(--transition);
+            font-weight: 500;
         }
 
         .specialty:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .specialty i {
@@ -221,13 +227,29 @@
         /* Intro Section */
         .intro {
             padding: 100px 0;
-            background-color: var(--white);
+            background-color: var(--off-white);
+            position: relative;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 20%);
+            z-index: 0;
         }
 
         .intro-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
@@ -237,6 +259,7 @@
             color: var(--dark);
             position: relative;
             display: inline-block;
+            font-family: 'Playfair Display', serif;
         }
 
         .section-title::after {
@@ -253,19 +276,21 @@
 
         .intro-text {
             font-size: 1.2rem;
-            color: var(--medium-gray);
+            color: var(--dark-gray);
             margin-bottom: 40px;
             line-height: 1.8;
+            font-weight: 400;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, #f0f9ff 0%, #f5f3ff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             border-left: 4px solid var(--primary);
-            padding: 25px;
+            padding: 30px;
             border-radius: var(--border-radius);
             margin-top: 40px;
             text-align: left;
             box-shadow: var(--shadow-light);
+            border: 1px solid var(--lighter-gray);
         }
 
         .highlight-box h3 {
@@ -275,6 +300,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
         }
 
         .highlight-box h3 i {
@@ -282,9 +308,10 @@
         }
 
         .highlight-box p {
-            color: var(--medium-gray);
+            color: var(--dark-gray);
             font-size: 1.05rem;
             line-height: 1.7;
+            font-weight: 400;
         }
 
         /* Quick Links */
@@ -300,8 +327,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 15px 25px;
-            background: var(--white);
+            padding: 18px 30px;
+            background: var(--card-bg);
             border-radius: var(--border-radius);
             text-decoration: none;
             color: var(--dark);
@@ -309,11 +336,30 @@
             box-shadow: var(--shadow-light);
             transition: var(--transition);
             border: 1px solid var(--lighter-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .quick-link:hover::before {
+            opacity: 0.05;
         }
 
         .quick-link:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
             color: var(--primary);
             border-color: var(--primary-light);
         }
@@ -321,6 +367,13 @@
         .quick-link i {
             font-size: 1.3rem;
             color: var(--primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .quick-link span {
+            position: relative;
+            z-index: 1;
         }
 
         /* Footer */
@@ -355,6 +408,7 @@
         .social-link:hover {
             background: var(--primary);
             transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .copyright {
@@ -363,15 +417,31 @@
             margin-top: 20px;
         }
 
-        /* Additional Sections */
+        /* Featured Projects Section */
         .featured-projects {
-            padding: 80px 0;
+            padding: 100px 0;
             background-color: var(--light);
+            position: relative;
+        }
+
+        .featured-projects::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 10% 90%, rgba(124, 58, 237, 0.03) 0%, transparent 20%);
+            z-index: 0;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
         }
 
         .section-header h2 {
@@ -379,62 +449,99 @@
             font-weight: 700;
             color: var(--dark);
             margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
         }
 
         .section-header p {
             color: var(--medium-gray);
             max-width: 600px;
             margin: 0 auto;
+            font-size: 1.1rem;
+            font-weight: 400;
         }
 
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            position: relative;
+            z-index: 1;
         }
 
         .project-card {
-            background: var(--white);
+            background: var(--card-bg);
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-light);
             transition: var(--transition);
+            border: 1px solid var(--lighter-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow);
+            border-color: var(--primary-light);
         }
 
         .project-content {
-            padding: 25px;
+            padding: 30px;
         }
 
         .project-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             color: var(--dark);
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         .project-content p {
-            color: var(--medium-gray);
+            color: var(--dark-gray);
             margin-bottom: 20px;
             line-height: 1.6;
+            font-weight: 400;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .project-tag {
             background: var(--lighter-gray);
-            color: var(--medium-gray);
-            padding: 5px 12px;
+            color: var(--dark-gray);
+            padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .project-tag:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
         }
 
         /* Responsive Design */
@@ -464,7 +571,7 @@
                 justify-content: center;
             }
             
-            .section-title {
+            .section-title, .section-header h2 {
                 font-size: 2rem;
             }
             
@@ -480,6 +587,7 @@
             .quick-link {
                 width: 100%;
                 max-width: 300px;
+                justify-content: center;
             }
             
             .featured-projects {
@@ -505,12 +613,16 @@
                 padding: 8px 15px;
             }
             
-            .section-title {
+            .section-title, .section-header h2 {
                 font-size: 1.8rem;
             }
             
             .project-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .highlight-box {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -599,7 +711,7 @@
         </div>
     </section>
     
-    <!-- New Featured Projects Section -->
+    <!-- Featured Projects Section -->
     <section class="featured-projects">
         <div class="container">
             <div class="section-header">
@@ -616,6 +728,7 @@
                             <span class="project-tag">Python</span>
                             <span class="project-tag">TensorFlow</span>
                             <span class="project-tag">Signal Processing</span>
+                            <span class="project-tag">MNE-Python</span>
                         </div>
                     </div>
                 </div>
@@ -628,6 +741,7 @@
                             <span class="project-tag">PyTorch</span>
                             <span class="project-tag">OpenCV</span>
                             <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">3D Segmentation</span>
                         </div>
                     </div>
                 </div>
@@ -640,6 +754,7 @@
                             <span class="project-tag">ROS</span>
                             <span class="project-tag">MATLAB</span>
                             <span class="project-tag">Robotics</span>
+                            <span class="project-tag">Control Systems</span>
                         </div>
                     </div>
                 </div>
@@ -656,7 +771,7 @@
                 <a href="https://www.linkedin.com/in/ishmael-aslami" class="social-link" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="mailto:your.email@example.com" class="social-link">
+                <a href="mailto:esmaeel.aslami@iau.ir" class="social-link">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://scholar.google.com" class="social-link" target="_blank">
@@ -665,7 +780,7 @@
             </div>
             
             <p class="copyright">
-                &copy; 2023 Ishmael Aslami. All rights reserved. | Designed with focus on clarity and purpose
+                &copy; <span id="current-year"></span> Ishmael Aslami. All rights reserved. | Designed with focus on clarity and purpose
             </p>
         </div>
     </footer>
@@ -686,7 +801,7 @@
             });
             
             // Update copyright year
-            document.querySelector('.copyright').innerHTML = `&copy; ${new Date().getFullYear()} Ishmael Aslami. All rights reserved. | Designed with focus on clarity and purpose`;
+            document.getElementById('current-year').textContent = new Date().getFullYear();
             
             // Add smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -702,6 +817,18 @@
                             behavior: 'smooth'
                         });
                     }
+                });
+            });
+            
+            // Add subtle hover effects to project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
                 });
             });
         });
